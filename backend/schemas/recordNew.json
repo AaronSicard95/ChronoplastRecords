@@ -1,0 +1,65 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "title",
+        "band",
+        "genres"
+    ],
+    "properties": {
+        "title": {
+            "type": "string",
+            "default": "",
+            "title": "The title Schema",
+            "examples": [
+                "New Record"
+            ]
+        },
+        "imageURL": {
+            "type": "string",
+            "default": "",
+            "title": "The imageURL Schema",
+            "examples": [
+                "/images/image.jpg"
+            ]
+        },
+        "band": {
+            "type": "string",
+            "default": "",
+            "title": "The bandname Schema",
+            "examples": [
+                "New Band"
+            ]
+        },
+        "genres": {
+            "type": "array",
+            "default": [],
+            "title": "The genres Schema",
+            "items": {
+                "type": "string",
+                "title": "A Schema",
+                "examples": [
+                    "Metal",
+                    "Death"
+                ]
+            },
+            "examples": [
+                ["Metal",
+                    "Death"
+                ]
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "examples": [{
+        "title": "New Record",
+        "band": "New Band",
+        "genres": [
+            "Metal",
+            "Death"
+        ]
+    }]
+}
